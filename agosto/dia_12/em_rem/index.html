@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em x Rem</title>
+</head>
+
+<style>
+    html {
+        font-size: 16px;
+    }
+
+    ul {
+        font-size: 2em;
+        /*16 x 2 = 32px*/
+    }
+
+    li {
+        font-size: 2em;
+        /* 2 x 2 x 16 = 64px (Acumulativo) */
+    }
+
+    .rem li {
+        font-size: 1rem;
+        /*16px (Fonte Raíz)*/
+    }
+</style>
+
+<body>
+    <ul>
+        <li>Acumulativo</li>
+        <li>Acumulativo</li>
+        <li>Acumulativo</li>
+        <li>Acumulativo</li>
+        <li>Acumulativo</li>
+    </ul>
+
+    <ul class="rem">
+        <li>Stat sua cuique dies
+            Stat sua cuique dies
+            Maél is mé tó féran</li>
+        <li>Ahleto men mei nostos
+            Ahleto men mei nostos
+            C'est pour cela que je suis née</li>
+        <li>Kono michi ya yuku hito nishi ni
+            Kono michi ya aki no kure
+            C'est pour cela que je suis née</li>
+        <li>Ne me plaignez pas
+            C'est pour cela que je suis née</li>
+    </ul>
+</body>
+
+</html>
