@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+    <style>
+        .bloco1,
+        .bloco2,
+        .bloco3 {
+            color: #fff;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+
+        .bloco1{
+            background-color: red;
+            z-index: 9999; /*Maior prioridade*/
+        }
+
+        .bloco2{
+            background-color: blue;
+        }
+
+        .bloco3{
+            background-color: green;
+            z-index: -1; /*Menor prioridade*/
+        }
+    </style>
+</head>
+<body>
+    <div class="bloco1">Bloco 1</div>
+    <div class="bloco2">Bloco 2</div>
+    <div class="bloco3">Bloco 3</div>
+</body>
+</html>
