@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Clock</title>
-    <link rel="stylesheet" href="style.css">k
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Digital Clock Start -->
@@ -17,12 +17,35 @@
             <span id="year">Year</span>
         </div>
         <div class="time">
-            <span id="hour">00</span>
-            <span id="minutes">00</span>
+            <span id="hour">00</span>:
+            <span id="minutes">00</span>:
             <span id="seconds">00</span>
             <span id="period">AM</span>
         </div>
     </div>
     <!-- Digital Clock End -->
+
+    <script>
+        function updateClock() {
+            let now = Date();
+            let nowDay = now.getDay(),
+            nowMonth = now.getMonth(),
+            nowNum = getDate(),
+            nowYear = now.getFullYear(),
+            nowHour = now.getHours(),
+            nowMin = now.getMinutes(),
+            nowSec = now.getSeconds(),
+            nowPeriod = "AM"
+
+            let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            let week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Sunday"];
+            let ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", "period"]
+            let values = [nowMonth, nowNum, nowYear, nowHour, nowMin, nowSec, nowPeriod]
+        }
+
+        function initClock() {
+            updateClock();
+        }
+    </script>
 </body>
 </html>
